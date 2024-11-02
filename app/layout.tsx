@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "../styles/globals.scss";
+import ProgressBar from "@/app/_components/ProgressBar";
+import HeroSection from "@/app/_components/ui/HeroSection/HeroSection";
+import AnimatedCursor from "@/app/_components/cursor/AnimatedCursor";
+import Footer from "@/app/_components/ui/Footer/Footer";
+import Navbar from "@/app/_components/ui/Navbar/Navbar";
+
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../assets//fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../assets/fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -23,12 +29,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        className={`${geistSans.variable} ${geistMono.variable} relative text-white antialiased`}>
+        <ProgressBar/>
+        <AnimatedCursor/>
+
+        <main className={'min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem]'}>
+          <Navbar/>
+          <HeroSection/>
+          {children}
+        </main>
+        <Footer/>
       </body>
     </html>
   );
