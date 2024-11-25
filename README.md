@@ -14,4 +14,3 @@ pnpm dev
 # or
 bun dev
 ```
-# Ti
