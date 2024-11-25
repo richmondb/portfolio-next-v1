@@ -17,7 +17,10 @@ function ProjectsSection() {
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
                 <SpringCards key={'card-1'} container_classname={'md:mt-8 h-full w-full'} card_color={'bg-[#6DE7B6]'}>
                     <div className="relative flex flex-col items-center justify-center">
-                        <Image src={'/images/portfolio_web.png'} alt={'portfolio website'} width={420} height={420} className={'w-full h-[190px] rounded object-center object-cover'} />
+                        <a className={'w-full'} href="https://github.com/richmondb/portfolio-next-v1" target="_blank">
+                            <Image src={'/images/portfolio_web.png'} alt={'portfolio website'} width={420} height={420} className={'w-full h-[190px] rounded object-center object-cover'} />
+                        </a>
+
                     </div>
                     <div className="pt-2 text-center text-white">
                         <p className="flex items-center justify-center  text-lg lg:text-xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -57,8 +60,12 @@ function ProjectsSection() {
                 </SpringCards>
                 <SpringCards key={'card-2'} container_classname={'md:mt-0'} card_color={'bg-[#A4B3FC]'}>
                     <div className="w-full relative flex flex-col items-center justify-center">
-                        <Image src={'/images/capstone_web.png'} alt={'portfolio website'} width={420} height={420}
-                               className={'w-full h-[190px] rounded object-center object-cover'}/>
+
+                        <a className={'w-full'} href="https://github.com/richmondb/prtech-e-commerce-capstone" target="_blank">
+                            <Image src={'/images/capstone_web.png'} alt={'portfolio website'} width={420} height={420}
+                                   className={'w-full h-[190px] rounded object-center object-cover'}/>
+                        </a>
+
                     </div>
                     <div className="pt-2 text-center text-white">
                         <p className="flex items-center justify-center  text-lg lg:text-xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
