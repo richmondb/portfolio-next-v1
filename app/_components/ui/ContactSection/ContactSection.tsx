@@ -10,7 +10,7 @@ function ContactSection() {
                 <div
                     className="w-[120px] h-[120px] bg-violet-600 rounded-full absolute filter blur-3xl  opacity-20"></div>
                 <span className="h-0.5 w-full bg-gradient-to-r from-cyan-400 to-purple-400 "></span>
-                <h2 className={'text-2xl lg:text-4xl font-mono px-1.5 whitespace-nowrap px-1.5'}>
+                <h2 className={'text-2xl lg:text-4xl font-mono px-1.5 whitespace-nowrap'}>
                     <span
                         className={'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400'}>C</span>
                     ontact Me
