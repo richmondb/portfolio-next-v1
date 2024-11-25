@@ -7,5 +7,6 @@
   background: white;
   transform-origin: 0;
   transform: scaleX(0);
-  box-shadow: 10px 0 100px rgb(255, 255, 255);
+  box-shadow: 10px 0 50px rgb(255, 255, 255);
+  z-index: 9999999;
 }

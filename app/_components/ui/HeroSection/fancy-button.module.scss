@@ -1,0 +1,106 @@
+// Fancy button styles
+.fancy {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1.15em 1.50em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  //font-size: 14px;
+
+  &:hover {
+    transform: scale(1.05);
+    color: white;
+    background: black;
+  }
+
+  &:before {
+    content: " ";
+    width: 1.15rem;
+    height: 2px;
+    background: white;
+
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+  }
+
+  .text {
+    line-height: 1.33333em;
+    padding-left: 1.75em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    @apply text-sm font-mono md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 transition-all;
+  }
+
+  & .top_key{
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    //background: cyan;
+    @apply bg-gradient-to-r from-cyan-400 to-purple-400;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+  }
+
+  & .bottom_key_1{
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    //background: cyan;
+    @apply bg-gradient-to-r from-cyan-400 to-purple-400;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+
+  & .bottom_key_2{
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    //background: cyan;
+    @apply bg-gradient-to-r from-cyan-400 to-purple-400;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+
+  &:hover::before{
+    width: 0.9375rem;
+    background: white;
+  }
+
+  &:hover .text{
+    color: white;
+    padding-left: 1.5em;
+  }
+  &:hover .top_key{
+    left: -2px;
+    width: 0px;
+  }
+  &:hover .bottom_key_1,
+  &:hover .bottom_key_2,{
+    right: 0;
+    width: 0;
+  }
+}

@@ -39,11 +39,34 @@ function AnimatedCursor() {
         //     "#3d005e"
         // ];
 
+        const colors2: string[] = [
+            "#a3c8f9",  // Light Sky Blue
+            "#8bbff3",  // Light Blue
+            "#74b7ec",  // Sky Blue
+            "#5aaee6",  // Dodger Blue
+            "#409cd7",  // Steel Blue
+            "#3589c7",  // Medium Blue
+            "#2e78b7",  // Royal Blue
+            "#2670a7",  // Deep Sky Blue
+            "#1f68a0",  // Sapphire
+            "#185f98",  // Denim Blue
+            "#10578f",  // Prussian Blue
+            "#0f4f87",  // Dark Blue
+            "#0a467f",  // Cobalt Blue
+            "#063e77",  // Midnight Blue
+            "#043673",  // Navy Blue
+            "#032c6b",  // Space Blue
+            "#022563",  // Ocean Blue
+            "#011c5b",  // Deep Blue
+            "#011254",  // Dark Navy
+            "#010b4c"   // Blackened Blue
+        ];
+
         // @ts-ignore
-        circles.forEach(function (circle: CircleElement) {
+        circles.forEach(function (circle: CircleElement, index: number) {
             circle.x = 0;
             circle.y = 0;
-            circle.style.backgroundColor = "#ffffff";
+            circle.style.backgroundColor = colors2[index % colors2.length];
         });
 
         window.addEventListener("mousemove", function (e: MouseEvent) {
@@ -67,24 +90,45 @@ function AnimatedCursor() {
 
                 // @ts-ignore
                 const nextCircle: CircleElement = circles[index + 1] as HTMLElement || circles[0] as HTMLElement;
-                x += (nextCircle.x - x) * 0.5;
-                y += (nextCircle.y - y) * 0.5;
+                x += (nextCircle.x - x) * 0.4;
+                y += (nextCircle.y - y) * 0.4;
             });
 
             requestAnimationFrame(animateCircles);
         }
 
         animateCircles();
+
+        return (() =>{
+                window.removeEventListener("mousemove", animateCircles)
+        });
     },[])
 
     return (
         <>
-            <div className={'circle'}></div>
-            <div className={'circle'}></div>
-            <div className={'circle'}></div>
-            <div className={'circle'}></div>
-            <div className={'circle'}></div>
-            <div className={'circle'}></div>
+            <div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+            </div>
+
         </>
     )
 }

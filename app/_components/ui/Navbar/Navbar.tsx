@@ -1,13 +1,20 @@
+import Image from "next/image";
+
+
 function Navbar() {
     return (
         <nav className="bg-transparent">
-            <div className="flex items-center justify-between py-5">
+            <div className="flex items-center justify-between py-6">
                 <div className="flex flex-shrink-0 items-center">
                     <a
-                        href="/public"
-                        className="roboto-regular text-[#16f2b3] text-3xl font-bold">
-                        Richmond.
+                        href="/"
+                        className="roboto-regular text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 text-4xl font-bold">
+                        <span className={''}>Richmond.</span>
+                        {/*<span className={'sm:hidden'}>R</span>*/}
                     </a>
+                </div>
+                <div className="flex flex-shrink-0 items-center">
+                    <Image src={'/heart-love-2.gif'} alt={'cutesy-nyan-cat'} width={128} height={128} unoptimized={true} className="w-20 h-auto" />
                 </div>
 
 

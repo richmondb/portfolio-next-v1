@@ -1,12 +1,19 @@
+import SkillsSection from "@/app/_components/ui/SkillsSection/SkillsSection";
+import ContactSection from "@/app/_components/ui/ContactSection/ContactSection";
+import AboutSection from "@/app/_components/ui/AboutSection/AboutSection";
+import ExperienceSection from "@/app/_components/ui/ExperiencesSection/ExperienceSection";
+import EducationSection from "@/app/_components/ui/EducationSection/EducationSection";
+import ProjectsSection from "@/app/_components/ui/ProjectsSection/ProjectsSection";
+
 export default function Home() {
   return (
     <>
-        <div className="h-screen">1</div>
-        <div className="h-screen">2</div>
-        <div className="h-screen">3</div>
-        <div className="h-screen">4</div>
-        <div className="h-screen">5</div>
-        <div className="h-screen">6</div>
+        <AboutSection/>
+        <ExperienceSection/>
+        <SkillsSection/>
+        <EducationSection/>
+        <ProjectsSection/>
+        <ContactSection/>
     </>
   );
 }
