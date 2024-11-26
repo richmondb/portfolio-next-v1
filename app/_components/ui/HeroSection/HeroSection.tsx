@@ -34,16 +34,16 @@ function HeroSection() {
                     </div>
                     <div className={'flex flex-row justify-start items-center gap-8 pb-6'}>
                         <a href="https://github.com/richmondb" target={'_blank'}>
-                            <GrGithub className={'text-4xl hover:scale-125 transition-all duration-300'}/>
+                            <GrGithub className={'text-3xl md:text-4xl hover:scale-125 transition-all duration-300'}/>
                         </a>
                         <a href="https://www.facebook.com/richmondjohnbillones/" target={'_blank'}>
-                            <FaFacebook className={'text-4xl hover:scale-125 transition-all duration-300'}/>
+                            <FaFacebook className={'text-3xl md:text-4xl hover:scale-125 transition-all duration-300'}/>
                         </a>
                         <a href="https://www.linkedin.com/in/richmondbillones" target={'_blank'}><GrLinkedin
-                            className={'text-4xl hover:scale-125 transition-all duration-300'}
+                            className={'text-3xl md:text-4xl hover:scale-125 transition-all duration-300'}
                         /></a>
                         <a href={"mailto:richmondjohnbillones@gmail.com"} target={'_blank'}><MdOutlineAlternateEmail
-                            className={'text-4xl hover:scale-125 transition-all duration-300'}/></a>
+                            className={'text-3xl md:text-4xl hover:scale-125 transition-all duration-300'}/></a>
 
                     </div>
                     <MyButton/>
@@ -196,7 +196,7 @@ const MyButton = () => {
 
 
 const LETTER_DELAY = 0.025;
-const BOX_FADE_DURATION = 0.125;
+const BOX_FADE_DURATION = 0.100;
 
 const FADE_DELAY = 5;
 const MAIN_FADE_DURATION = 0.25;
