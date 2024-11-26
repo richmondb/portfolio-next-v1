@@ -2,7 +2,7 @@ import React from 'react'
 
 function ExperienceSection() {
     return (
-        <div className="my-8 lg:my-16 py-8 lg:py-16">
+        <div className="my-4 lg:my-8 py-8 lg:py-16">
             <div className={'w-full pb-12 flex flex-row items-center'}>
                 <div className="w-fit p-1 px-2 rounded bg-[rgba(255,255,255,0.1)] backdrop-blur-sm">
                     <h1 className={'text-2xl font-mono'}>EXPERIENCE</h1>

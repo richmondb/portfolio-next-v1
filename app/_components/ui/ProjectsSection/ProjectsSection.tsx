@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function ProjectsSection() {
 
-    return (<div className="relative my-8 lg:my-16 py-8 lg:py-16 ">
+    return (<div className="relativemy-4 lg:my-8 py-8 lg:py-16 ">
         <div className={' w-full pb-12 flex flex-row items-center'}>
             <span className="h-0.5 w-full bg-gradient-to-r from-cyan-400 to-purple-400 "></span>
             <div className="relative w-fit p-1 px-2 rounded bg-[rgba(255,255,255,0.1)] backdrop-blur-sm">

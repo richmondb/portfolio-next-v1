@@ -10,7 +10,7 @@ import Image from "next/image";
 
 
 function SkillsSection() {
-    return (<div className="relative px-4 my-8 lg:my-16 py-8 lg:py-16">
+    return (<div className="relative px-4 my-4 lg:my-8 py-8 lg:py-16">
         <div className="flex justify-center -translate-y-[1px]">
             <div className="w-3/4">
                 <div

@@ -13,25 +13,18 @@ function AboutSection() {
     const scope_2 = useRef<HTMLDivElement | null>(null);
 
 
-    const isInView_1 = useInView(scope_1, {once: false, amount: 0})
-    const isInView_2 = useInView(scope_2, {once: false,})
+    const isInView_1 = useInView(scope_1, {once: false})
+    const isInView_2 = useInView(scope_2, {once: false})
 
-    // useEffect(() => {
-    //     console.log("Element is in view: ", isInView_1);
-    //     // if (isInView_1 && isInView_2) {
-    //     //     animate_1(scope_1.current, { opacity: 1, transform: "translateX(0px)", duration: 1000 });
-    //     //     animate_2(scope_2.current, { opacity: 1, transform: "translateX(0px)", duration: 1000 });
-    //     // }
-    // }, [isInView_1, isInView_2])
 
     return (<>
         <div
-            className={'relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 my-8 lg:my-16 items-center overflow-hidden'}>
+            className={'relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 my-4 lg:my-8 py-8 lg:py-16 items-center overflow-hidden'}>
             <motion.div ref={scope_1}
                         style={{
-                            transform: isInView_1 ? "none" : "translateX(-100px)",
+                            transform: isInView_1 ? "none" : "translateX(-150px)",
                             opacity: isInView_1 ? 1 : 0,
-                            transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s"
+                            transition: "all 750ms cubic-bezier(0.17, 0.55, 0.55, 1) 0s"
                         }}
                         className={'text-sm lg:text-lg text-pretty'}>
                 <div className={'pb-6'}>
@@ -58,9 +51,9 @@ function AboutSection() {
             </motion.div>
             <motion.div ref={scope_2}
                         style={{
-                            transform: isInView_2 ? "none" : "translateX(100px)",
+                            transform: isInView_2 ? "none" : "translateX(150px)",
                             opacity: isInView_2 ? 1 : 0,
-                            transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s"
+                            transition: "all 750ms cubic-bezier(0.17, 0.55, 0.55, 1) 0s"
                         }}
                         className={'flex justify-center'}>
                 <TiltCard/>

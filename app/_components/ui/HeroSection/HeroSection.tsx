@@ -4,6 +4,9 @@ import style from "./fancy-button.module.scss"
 import {motion} from 'framer-motion'
 import {IoIosClose} from "react-icons/io";
 import Image from "next/image";
+import {GrGithub, GrLinkedin} from "react-icons/gr";
+import {MdOutlineAlternateEmail} from "react-icons/md";
+import { FaFacebook } from "react-icons/fa";
 
 
 function HeroSection() {
@@ -15,9 +18,9 @@ function HeroSection() {
 
             <div className={'order-2 lg:order-1'}>
                 <div className={'items-center justify-center'}>
-                    <h1 className={'text-white font-black  text-4xl lg:text-6xl'}>Hi!,</h1>
+                    <h1 className={'text-white font-black  text-4xl lg:text-6xl'}>Hi!</h1>
                     <h1 className={'text-white font-black  text-5xl  lg:text-7xl py-3'}> I&#39;m <span
-                        className={'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400'}>Richmond</span>
+                        className={'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400'}>Richmond,</span>
                     </h1>
                     <div>
                         <h1 className={'text-4xl lg:text-5xl py-3 inline-block text-pre'}>Aspiring&nbsp;</h1>
@@ -29,24 +32,38 @@ function HeroSection() {
                             applications. Experienced in applying machine learning techniques to real-world problems, as
                             demonstrated in my college capstone project.</h1>
                     </div>
+                    <div className={'flex flex-row justify-start items-center gap-8 pb-6'}>
+                        <a href="https://github.com/richmondb" target={'_blank'}>
+                            <GrGithub className={'text-4xl hover:scale-125 transition-all duration-300'}/>
+                        </a>
+                        <a href="https://www.facebook.com/richmondjohnbillones/" target={'_blank'}>
+                            <FaFacebook className={'text-4xl hover:scale-125 transition-all duration-300'}/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/richmondbillones" target={'_blank'}><GrLinkedin
+                            className={'text-4xl hover:scale-125 transition-all duration-300'}
+                        /></a>
+                        <a href={"mailto:richmondjohnbillones@gmail.com"} target={'_blank'}><MdOutlineAlternateEmail
+                            className={'text-4xl hover:scale-125 transition-all duration-300'}/></a>
+
+                    </div>
                     <MyButton/>
                 </div>
             </div>
-            <div className={'relative order-1 lg:order-2'}>
-                <div className={'h-fit bg-[rgba(9,10,17,1)] shadow-[0_0px_70px_-40px_rgba(255,255,255,0.3)]'}>
-                    <div className={'flex items-center gap-2 p-3 w-fit bg-gray-600'}>
-                        <Image src={"/svg/javascript.svg"} alt="javascript svg" width={16} height={16}/>
-                        <p className={'text-sm roboto-bold'}>about-me.js</p>
-                        <IoIosClose/>
-                    </div>
-                    <hr/>
-                    <div className={'p-6'}>
-                        <code className="font-mono text-xs md:text-sm lg:text-base">
-                            <div>
-                                <span className="mr-2 text-pink-500">const</span>
-                                <span className="mr-2 text-white">coder</span>
-                                <span className="mr-2 text-pink-500">=</span>
-                                <span className="text-gray-400">{'{'}</span>
+        <div className={'relative order-1 lg:order-2'}>
+            <div className={'h-fit bg-[rgba(9,10,17,1)] shadow-[0_0px_70px_-40px_rgba(255,255,255,0.3)]'}>
+                <div className={'flex items-center gap-2 p-3 w-fit bg-gray-600'}>
+                    <Image src={"/svg/javascript.svg"} alt="javascript svg" width={16} height={16}/>
+                    <p className={'text-sm roboto-bold'}>about-me.js</p>
+                    <IoIosClose/>
+                </div>
+                <hr/>
+                <div className={'p-6'}>
+                    <code className="font-mono text-xs md:text-sm lg:text-base">
+                        <div>
+                            <span className="mr-2 text-pink-500">const</span>
+                            <span className="mr-2 text-white">coder</span>
+                            <span className="mr-2 text-pink-500">=</span>
+                            <span className="text-gray-400">{'{'}</span>
                             </div>
                             <div>
                                 <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
