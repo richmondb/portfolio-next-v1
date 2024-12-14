@@ -11,6 +11,7 @@ import Devhelper from "@/app/_components/helper/devhelper";
 import SpectrumBg from "@/app/_components/ui/HeroBackgrounds/SpectrumBg";
 import GridBg from "@/app/_components/ui/HeroBackgrounds/GridBg";
 import ScreenSizeModal from "@/app/_components/ui/Modals/ScreenAwareHelper/ScreenSizeModal";
+import React from "react";
 
 
 const geistSans = localFont({

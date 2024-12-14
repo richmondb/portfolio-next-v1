@@ -18,15 +18,15 @@ function HeroSection() {
 
             <div className={'order-2 lg:order-1'}>
                 <div className={'items-center justify-center'}>
-                    <h1 className={'text-white font-black  text-4xl lg:text-6xl'}>Hi!</h1>
+                    <h1 className={'text-white font-black  text-5xl lg:text-6xl py-3'}>Hi!</h1>
                     <h1 className={'text-white font-black  text-5xl  lg:text-7xl py-3'}> I&#39;m <span
                         className={'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400'}>Richmond,</span>
                     </h1>
                     <div>
-                        <h1 className={'text-4xl lg:text-5xl py-3 inline-block text-pre'}>Aspiring&nbsp;</h1>
+                        <h1 className={'text-5xl lg:text-5xl py-3 inline-block text-pre'}>Aspiring&nbsp;</h1>
                         <Typewrite examples={Me}/>
                     </div>
-                    <div className={'py-6 pr-8 text-pretty text-base lg:text-lg'}>
+                    <div className={'py-6 pr-8 text-pretty text-base lg:text-lg text-justify'}>
                         <h1>Recent IT graduate with a strong foundation in web development and data
                             science. Skilled in leveraging NextJS, Laravel, and Django to build robust and scalable
                             applications. Experienced in applying machine learning techniques to real-world problems, as
@@ -214,7 +214,7 @@ const Typewrite = ({examples}: { examples: string[] }) => {
         return () => clearInterval(intervalId);
     }, [examples.length]);
 
-    return (<p className="inline-block ">
+    return (<p className="inline-block py-3 ">
             <span className="text-4xl md:text-5xl">
                 {examples[exampleIndex].split("").map((l, i) => (<motion.span
                         initial={{

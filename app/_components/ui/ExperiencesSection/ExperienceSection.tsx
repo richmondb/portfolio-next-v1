@@ -11,8 +11,10 @@ function ExperienceSection() {
 
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
-                <div></div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
+                <div>
+
+                </div>
                 <div className={'col-span-2 flex flex-col gap-8 '}>
                     <div
                         className={'backdrop-blur-sm bg-[rgba(255,255,255,0.1)] rounded border border-solid border-gray-800 p-6'}>

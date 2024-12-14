@@ -42,25 +42,26 @@ const ClipPathLinks = () => {
 
                 </div>
 
-                <div className="grid grid-cols-4 divide-x divide-amber-50">
+                <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y divide-amber-50">
 
-                    <LinkBox Icon={RiNextjsLine}  alt={'Nextjs'}/>
+                    <LinkBox Icon={RiNextjsLine} alt={'Nextjs'}/>
 
-                    <LinkBox Icon={FaFigma}  alt={'Figma'}/>
+                    <LinkBox Icon={FaFigma} alt={'Figma'}/>
 
-                    <LinkBox Icon={SiMysql}  alt={'Mysql'}/>
+                    <LinkBox Icon={SiMysql} alt={'Mysql'}/>
 
-                    <LinkBox Icon={SiDjango}  alt={'Django'}/>
+                    <LinkBox Icon={SiDjango} alt={'Django'}/>
+
 
                 </div>
 
                 <div className="grid grid-cols-3 divide-x divide-amber-50">
 
-                    <LinkBox Icon={FaDocker}  alt={'Docker'}/>
+                    <LinkBox Icon={FaDocker} alt={'Docker'}/>
 
-                    <LinkBox Icon={SiTailwindcss}  alt={'Tailwindcss'}/>
+                    <LinkBox Icon={SiTailwindcss} alt={'Tailwindcss'}/>
 
-                    <LinkBox Icon={FaBootstrap}  alt={'Bootstrap'}/>
+                    <LinkBox Icon={FaBootstrap} alt={'Bootstrap'}/>
 
                 </div>
 

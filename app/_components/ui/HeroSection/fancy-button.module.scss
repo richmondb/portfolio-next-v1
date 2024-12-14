@@ -19,12 +19,11 @@
   text-transform: none;
   transition: all 0.3s ease-in-out;
   user-select: none;
-  //font-size: 14px;
 
   &:hover {
     transform: scale(1.05);
     color: white;
-    background: black;
+    background: rgba(0, 0, 0, 0.6);
   }
 
   &:before {
@@ -76,7 +75,7 @@
 
   & .bottom_key_2{
     height: 2px;
-    width: 0.625rem;
+    width: 0.825rem;
     right: 0.625rem;
     bottom: -2px;
     position: absolute;
@@ -96,7 +95,7 @@
   }
   &:hover .top_key{
     left: -2px;
-    width: 0px;
+    width: 0;
   }
   &:hover .bottom_key_1,
   &:hover .bottom_key_2,{
