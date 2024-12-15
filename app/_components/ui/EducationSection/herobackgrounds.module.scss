@@ -1,0 +1,61 @@
+.educationSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg_shape_1{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #5B21B6;
+  //top: -30px;
+  filter: blur(90px);
+  animation: circleMotion1 10s linear infinite;
+}
+.bg_shape_2{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #0d9488;
+  filter: blur(90px);
+  animation: circleMotion2 10s linear infinite;
+}
+
+@keyframes circleMotion1 {
+  0% {
+    left: 0px; top: 0;
+  }
+  25% {
+    left: -120px; top: 90px;
+  }
+  50% {
+    left: -80px; top: 20px;
+  }
+  75% {
+    left: 40px; top: -80px;
+  }
+  100% {
+    left: 0px; top: 0;
+  }
+}
+@keyframes circleMotion2 {
+  0% {
+    left: 0px; top: 0;
+  }
+  25% {
+    left: -40px; top: 100px;
+  }
+  50% {
+    left: -120px; top: 130px;
+  }
+  75% {
+    left: -20px; top: -80px;
+  }
+  100% {
+    left: 0px; top: 0;
+  }
+}
