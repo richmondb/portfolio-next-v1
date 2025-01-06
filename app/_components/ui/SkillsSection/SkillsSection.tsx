@@ -44,7 +44,7 @@ const ClipPathLinks = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y divide-amber-50">
 
-                    <LinkBox Icon={RiNextjsLine} alt={'Nextjs'}/>
+                    <LinkBox Icon={RiNextjsLine} alt={'Next.js'}/>
 
                     <LinkBox Icon={FaFigma} alt={'Figma'}/>
 

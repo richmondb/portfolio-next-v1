@@ -7,7 +7,7 @@ function EducationSection() {
     const constraintsRef = useRef(null);
 
     return (<div className="relative my-4 lg:my-8 py-8 lg:py-16 ">
-        <div className={`${styles.educationSection} absolute inset-0  -z-50`}>
+        <div className={`${styles.educationSection} absolute inset-0 -z-50`}>
             <div className={styles.bg_shape_1}></div>
             <div className={styles.bg_shape_2}></div>
         </div>
