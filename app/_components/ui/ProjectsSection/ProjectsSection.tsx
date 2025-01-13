@@ -1,6 +1,8 @@
+"use client";
 import React from 'react'
-import SpringCards from "@/app/_components/ui/ProjectsSection/SpringCards";
-import Image from "next/image";
+import GlassCard from "@/app/_components/ui/ProjectsSection/GlassCard";
+import {ProjectList} from "@/app/data/ProjectList";
+import {motion} from "framer-motion";
 
 function ProjectsSection() {
 
@@ -14,176 +16,16 @@ function ProjectsSection() {
       </div>
     </div>
     <div className={'w-full grid align-center items-center justify-center'}>
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
-        <SpringCards key={'card-1'} container_classname={'md:mt-8 h-full w-full'} card_color={'bg-[#6DE7B6]'}>
-          <div className="relative flex flex-col items-center justify-center">
-            <a className={'w-full'} href="https://github.com/richmondb/portfolio-next-v1" target="_blank">
-              <Image src={'/images/portfolio_web.png'} alt={'portfolio website'} width={420} height={420}
-                     className={'w-full h-[190px] rounded object-center'}/>
-            </a>
-
-          </div>
-          <div className="pt-2 text-center text-white">
-            <p className="flex items-center justify-center  text-lg lg:text-xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Portfolio Website
-            </p>
-            <div>
-              <p className="flex items-center text-gray-300 text-base font-medium ">
-                My portfolio website, created using NextJS and Framer motion.
-              </p>
-              <p className="flex justify-center items-center  text-xl font-medium uppercase pt-1 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Language/Framework
-
-              </p>
-              <div className="px-4">
-                <ul className="flex justify-center items-center text-gray-300  text-base font-medium gap-3">
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Next.js
-                    </p>
-
-                  </li>
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Framer Motion
-                    </p>
-
-                  </li>
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Typescript
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </SpringCards>
-        <SpringCards key={'card-2'} container_classname={'md:mt-0'} card_color={'bg-[#A4B3FC]'}>
-          <div className="w-full relative flex flex-col items-center justify-center">
-
-            <a className={'w-full'} href="https://github.com/richmondb/prtech-e-commerce-capstone" target="_blank">
-              <Image src={'/images/capstone_web.png'} alt={'portfolio website'} width={420} height={420}
-                     className={'w-full h-[190px] rounded object-center'}/>
-            </a>
-
-          </div>
-          <div className="pt-2 text-center text-white">
-            <p className="flex items-center justify-center  text-lg lg:text-xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Capstone Website
-            </p>
-            <div>
-              <p className="flex items-center text-gray-300 text-base font-medium ">
-                College capstone Website utilizing machine learning and laravel framework.
-              </p>
-              <p className="flex justify-center items-center  text-xl font-medium uppercase pt-1 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Language/Framework
-              </p>
-              <div className="px-4">
-                <ul className="flex justify-center items-center text-gray-300  text-base font-medium gap-3">
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Laravel (PHP)
-                    </p>
-
-                  </li>
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Python (Api, ML)
-                    </p>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-          </div>
-        </SpringCards>
-
-        <SpringCards key={'card-3'} container_classname={'md:mt-4 md:mr-8'} card_color={'bg-[#A4B3FC]'}>
-          <div className="w-full relative flex flex-col items-center justify-center">
-
-            <a className={'w-full'} href="https://github.com/richmondb/techno-project-2023" target="_blank">
-              <Image src={'/images/investofarm_web.jpeg'} alt={'InvestoFarm'} width={420} height={420}
-                     className={'w-full h-[190px] rounded object-center'}/>
-            </a>
-
-          </div>
-          <div className="pt-2 text-center text-white">
-            <p className="flex items-center justify-center  text-lg lg:text-xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Cropital Clone Website
-            </p>
-            <div>
-              <p className="flex items-center text-gray-300 text-base font-medium ">
-                A clone of the Cropital website, with authentication and user dashboard.
-              </p>
-              <p className="flex justify-center items-center  text-xl font-medium uppercase pt-1 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Language/Framework
-              </p>
-              <div className="px-4">
-                <ul className="flex justify-center items-center text-gray-300  text-base font-medium gap-3">
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Next.js
-                    </p>
-                  </li>
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Prisma
-                    </p>
-                  </li>
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Supabase
-                    </p>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-          </div>
-        </SpringCards>
-
-
-        <SpringCards key={'card-4'} container_classname={''} card_color={'bg-[#A4B3FC]'}>
-          <div className="w-full relative flex flex-col items-center justify-center">
-
-            <a className={'w-full'} href="https://github.com/richmondb/SecurityAgencyCapstone" target="_blank">
-              <Image src={'/images/protectionicon_web.gif'} alt={'portfolio website'} width={420} height={420}
-                     className={'w-full h-[190px] rounded object-contain aspect-auto'}/>
-            </a>
-
-          </div>
-          <div className="pt-2 text-center text-white">
-            <p className="flex items-center justify-center  text-lg lg:text-xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Security Agency Website
-            </p>
-            <div>
-              <p className="flex items-center text-gray-300 text-base font-medium ">
-                Django website for a security agency, with authentication and user dashboard, report generation and
-                more.
-              </p>
-              <p className="flex justify-center items-center  text-xl font-medium uppercase pt-1 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Language/Framework
-              </p>
-              <div className="px-4">
-                <ul className="flex justify-center items-center text-gray-300  text-base font-medium gap-3">
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Django
-                    </p>
-
-                  </li>
-                  <li>
-                    <p className="flex items-center  text-base font-medium ">
-                      Html | Css | Js
-                    </p>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-          </div>
-        </SpringCards>
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+        {ProjectList.map((project, index) => {
+          return (<motion.div key={index}
+                              initial={{opacity: 0}}
+                              whileInView={{opacity: 1}}
+                              viewport={{once: true}}
+                              transition={{duration: 0.3, delay: index * 0.150}}>
+            <GlassCard  {...project}/>
+          </motion.div>)
+        })}
       </div>
     </div>
 
