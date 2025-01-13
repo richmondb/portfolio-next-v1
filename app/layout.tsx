@@ -12,6 +12,7 @@ import SpectrumBg from "@/app/_components/ui/HeroBackgrounds/SpectrumBg";
 import GridBg from "@/app/_components/ui/HeroBackgrounds/GridBg";
 import ScreenSizeModal from "@/app/_components/ui/Modals/ScreenAwareHelper/ScreenSizeModal";
 import React from "react";
+import GoogleAnalytics from "@/app/analytics/GoogleAnalytics";
 
 
 const geistSans = localFont({
@@ -34,6 +35,7 @@ export default function RootLayout({
     return (<html lang="en">
     <body
         className={`relative body ${geistSans.variable} ${geistMono.variable} relative text-white antialiased`}>
+    <GoogleAnalytics/>
     <ProgressBar/>
     <ScreenSizeModal/>
     <GridBg/>
