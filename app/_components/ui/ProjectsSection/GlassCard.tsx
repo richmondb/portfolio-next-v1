@@ -18,13 +18,13 @@ function GlassCard(props: projectType) {
             {props.project_origin}
           </p>
         </div>
-        <div className={'my-2'}>
-          <p className={'font-sans text-2xl gradient-text flex items-center'}>
+        <div className={'my-2 flex items-center'}>
+          <p className={'font-sans text-2xl gradient-text'}>
             {props.title}
-            <a href={props.github} target={'_blank'} className={'ml-2'}>
-              <FaGithub size={24} className={'text-white'}/>
-            </a>
           </p>
+          <a href={props.github} target={'_blank'} className={'font-mono ml-2'}>
+            <FaGithub size={24} className={'text-white'}/>
+          </a>
         </div>
         <div className={'my-2'}>
           <p className={'font-sans text-base text-white/80 text-pretty text-start'}>
