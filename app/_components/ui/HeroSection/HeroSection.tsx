@@ -46,7 +46,7 @@ function HeroSection() {
               className={'text-3xl md:text-4xl hover:scale-125 transition-all duration-300'}/></a>
 
         </div>
-        <MyButton/>
+        <DownloadResumeButton/>
       </div>
     </div>
     <div className={'relative lg:order-2'}>
@@ -180,11 +180,11 @@ function HeroSection() {
   </section>)
 }
 
-const MyButton = () => {
+const DownloadResumeButton = () => {
 
   return (<>
         <a className={style.fancy} target={'_blank'}
-           href={'https://drive.google.com/file/d/1cGA81gxA1K34u6z79lDJzIWtSKQcmrS4/view?usp=sharing'}>
+           href={'https://drive.google.com/file/d/1etrSNA3xUWPrILHI2YUfScnN8bhQwTYd/view?usp=sharing'}>
           <span className={style.top_key}></span>
           <span className={style.text}>Download Resume</span>
           <span className={style.bottom_key_1}></span>
