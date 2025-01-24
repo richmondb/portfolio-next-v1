@@ -36,5 +36,14 @@ export const ProjectList: projectType[] = [
     github: 'https://github.com/richmondb/SecurityAgencyCapstone',
     description: 'Django website for a security agency, with authentication and user dashboard, report generation and more.',
     languages: ['Django', 'Html', 'Css', 'Js'],
+  },
+  {
+    image: '/images/snip-url_web.png',
+    image_alt: 'snip url website',
+    project_origin: 'Side Project',
+    title: 'SnipUrl',
+    github: 'https://github.com/richmondb/snip-url.git',
+    description: 'A simple Link Shortener App with authentication and links dashboard',
+    languages: ['NextJs', 'Tailwind', 'Sqlite', 'HeadlessUI'],
   }
 ];
