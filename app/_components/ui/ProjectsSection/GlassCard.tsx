@@ -26,11 +26,20 @@ function GlassCard(props: projectType) {
             <FaGithub size={24} className={'text-white'}/>
           </a>
         </div>
+        {props.demo && (
+            <div className={'my-2'}>
+                <a href={props.demo} target={'_blank'}
+                     className={'font-sans text-base text-white/80 text-pretty hover:text-purple-200 underline underline-offset-4'}>
+                    Demo Link
+                </a>
+            </div>
+        )}
         <div className={'my-2'}>
           <p className={'font-sans text-base text-white/80 text-pretty text-start'}>
             {props.description}
           </p>
         </div>
+
         <div className={'my-2'}>
           <p className={'font-sans text-base text-white/80 text-pretty'}>
             {props?.languages.map((language, index) => {
