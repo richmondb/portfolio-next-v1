@@ -6,7 +6,7 @@ import {FaGithub} from "react-icons/fa";
 
 function GlassCard(props: projectType) {
   return (<div className={`${styles.glassCard}`}>
-    <div>
+    <div className={'z-10 h-full'}>
       <div className={`${styles.imageContainer} relative w-full h-52 max-h-52 overflow-hidden mb-2 rounded-xl`}>
         <Image src={props.image} alt={props.image_alt} width={520} height={520}
                sizes={'(max-width: 520px) 100vw, 520px'}
