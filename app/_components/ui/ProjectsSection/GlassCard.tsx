@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./glass-card.module.scss"
 import Image from "next/image";
-import {projectType} from "@/app/types";
+import type {projectType} from "@/app/types";
 import {FaGithub} from "react-icons/fa";
 
 function GlassCard(props: projectType) {
@@ -10,7 +10,7 @@ function GlassCard(props: projectType) {
       <div className={`${styles.imageContainer} relative w-full h-52 max-h-52 overflow-hidden mb-2 rounded-xl`}>
         <Image src={props.image} alt={props.image_alt} width={520} height={520}
                sizes={'(max-width: 520px) 100vw, 520px'}
-               className={'h-full w-full  object-fill aspect-square transition-all duration-300 ease-in-out'}></Image>
+               className={'h-full w-full  object-fill aspect-square transition-all duration-300 ease-in-out'} />
       </div>
       <div className={'h-full'}>
         <div className={'my-2'}>
@@ -22,13 +22,13 @@ function GlassCard(props: projectType) {
           <p className={'font-sans text-2xl gradient-text'}>
             {props.title}
           </p>
-          <a href={props.github} target={'_blank'} className={'font-mono ml-2'}>
+          <a href={props.github} rel="noreferrer" target={'_blank'} className={'font-mono ml-2'}>
             <FaGithub size={24} className={'text-white'}/>
           </a>
         </div>
         {props.demo && (
             <div className={'my-2'}>
-                <a href={props.demo} target={'_blank'}
+                <a href={props.demo} rel="noreferrer" target={'_blank'}
                      className={'font-sans text-base text-white/80 text-pretty hover:text-purple-200 underline underline-offset-4'}>
                     Demo Link
                 </a>
@@ -52,7 +52,7 @@ function GlassCard(props: projectType) {
 
       </div>
     </div>
-    <div className={styles.linearLight}></div>
+    <div className={styles.linearLight}/>
   </div>)
 }
 

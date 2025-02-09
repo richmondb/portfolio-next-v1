@@ -16,7 +16,26 @@ function HeroSection() {
   return (<section
       className="h-auto lg:max-h-[800px] min-h-[800px] grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 py-8 lg:py-16 text-white items-center">
 
-    <div className={'order-1'}>
+    <motion.div 
+    initial={{
+      opacity: 0,
+      x: -50,
+      y: -50,
+    }}
+
+    animate={{
+      opacity: 1,
+      y: 0,
+      x: 0,
+    }}
+
+    transition={{
+      duration: 0.3,
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+    }}
+    className={'order-1'}>
       <div className={'items-center justify-center'}>
         <h1 className={'text-white font-black  text-5xl lg:text-6xl py-3'}>Hi!</h1>
         <h1 className={'text-white font-black  text-5xl  lg:text-7xl py-3'}> I&#39;m <span
@@ -33,23 +52,44 @@ function HeroSection() {
             demonstrated in my college capstone project.</h1>
         </div>
         <div className={'flex flex-row justify-start items-center gap-8 pb-6'}>
-          <a href="https://github.com/richmondb" target={'_blank'}>
+          <a href="https://github.com/richmondb" target={'_blank'} rel="noreferrer">
             <GrGithub className={'text-3xl md:text-4xl hover:scale-125 transition-all duration-300'}/>
           </a>
-          <a href="https://www.facebook.com/richmondjohnbillones/" target={'_blank'}>
+          <a href="https://www.facebook.com/richmondjohnbillones/" target={'_blank'} rel="noreferrer">
             <FaFacebook className={'text-3xl md:text-4xl hover:scale-125 transition-all duration-300'}/>
           </a>
-          <a href="https://www.linkedin.com/in/richmondbillones" target={'_blank'}><GrLinkedin
+          <a href="https://www.linkedin.com/in/richmondbillones" target={'_blank'} rel="noreferrer"><GrLinkedin
               className={'text-3xl md:text-4xl hover:scale-125 transition-all duration-300'}
           /></a>
-          <a href={"mailto:richmondjohnbillones@gmail.com"} target={'_blank'}><MdOutlineAlternateEmail
+          <a href={"mailto:richmondjohnbillones@gmail.com"} target={'_blank'} rel="noreferrer"><MdOutlineAlternateEmail
               className={'text-3xl md:text-4xl hover:scale-125 transition-all duration-300'}/></a>
 
         </div>
         <DownloadResumeButton/>
       </div>
-    </div>
-    <div className={'relative lg:order-2'}>
+    </motion.div>
+
+    <motion.div 
+    initial={{
+      opacity: 0,
+      x: 50,
+      y: 50,
+    }}
+
+    animate={{
+      opacity: 1,
+      y: 0,
+      x: 0,
+    }}
+
+    transition={{
+      duration: 0.3,
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+    }}
+
+    className={'relative lg:order-2'}>
       <div className={'h-fit bg-[rgba(9,10,17,1)] shadow-[0_0px_70px_-40px_rgba(255,255,255,0.3)]'}>
         <div className={'flex items-center gap-2 p-3 w-fit bg-gray-600'}>
           <Image src={"/svg/javascript.svg"} alt="javascript svg" width={16} height={16}/>
@@ -176,7 +216,7 @@ function HeroSection() {
         </div>
 
       </div>
-    </div>
+    </motion.div>
   </section>)
 }
 
@@ -184,7 +224,7 @@ const DownloadResumeButton = () => {
 
   return (<>
         <a className={style.fancy} target={'_blank'}
-           href={'https://drive.google.com/file/d/1etrSNA3xUWPrILHI2YUfScnN8bhQwTYd/view?usp=sharing'}>
+           href={'https://drive.google.com/file/d/1etrSNA3xUWPrILHI2YUfScnN8bhQwTYd/view?usp=sharing'} rel="noreferrer">
           <span className={style.top_key}></span>
           <span className={style.text}>Download Resume</span>
           <span className={style.bottom_key_1}></span>

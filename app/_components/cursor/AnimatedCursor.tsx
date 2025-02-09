@@ -1,6 +1,6 @@
 "use client"
-import React, {useEffect} from 'react'
-import "./animatedcursor.scss"
+import React, {useEffect, useRef} from 'react'
+import "./animatedcursor.css"
 
 interface CircleElement extends HTMLElement {
     x: number;
@@ -8,11 +8,10 @@ interface CircleElement extends HTMLElement {
 }
 
 function AnimatedCursor() {
-
+    const coords = useRef<{x: number, y: number}>({x: 0, y: 0});
 
     useEffect(() => {
-        const coords: { x: number; y: number } = {x: 0, y: 0};
-        const circles: NodeListOf<HTMLElement> = document.querySelectorAll(".circle");
+        const circles: NodeListOf<CircleElement> = document.querySelectorAll(".circle");
 
         // const colors: string[] = [
         //     "#ffb56b",
@@ -62,36 +61,38 @@ function AnimatedCursor() {
             "#010b4c"   // Blackened Blue
         ];
 
+
+
+        window.addEventListener("mousemove", (e: MouseEvent) => {
+            coords.current.x = e.clientX;
+            coords.current.y = e.clientY;
+        });
+
         // @ts-ignore
-        circles.forEach(function (circle: CircleElement, index: number) {
+        circles.forEach((circle: CircleElement, index: number) => {
             circle.x = 0;
             circle.y = 0;
             circle.style.backgroundColor = colors2[index % colors2.length];
         });
 
-        window.addEventListener("mousemove", function (e: MouseEvent) {
-            coords.x = e.clientX;
-            coords.y = e.clientY;
-        });
-
         // eslint-disable-next-line no-inner-declarations
         function animateCircles(): void {
-            let x = coords.x;
-            let y = coords.y;
+            let x = coords.current.x;
+            let y = coords.current.y;
 
             // @ts-ignore
-            circles.forEach(function (circle: CircleElement, index: number) {
-                circle.style.left = x - 12 + "px";
-                circle.style.top = y - 12 + "px";
+            circles.forEach((circle: CircleElement, index: number) => {
+                circle.style.left = `${x - 12}px`;
+                circle.style.top = `${y - 12}px`;
                 circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
 
                 circle.x = x;
                 circle.y = y;
 
-                // @ts-ignore
-                const nextCircle: CircleElement = circles[index + 1] as HTMLElement || circles[0] as HTMLElement;
-                x += (nextCircle.x - x) * 0.4;
-                y += (nextCircle.y - y) * 0.4;
+                
+                const nextCircle: CircleElement = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
             });
 
             requestAnimationFrame(animateCircles);
@@ -107,12 +108,6 @@ function AnimatedCursor() {
     return (
         <>
             <div>
-                <div className="circle"></div>
-                <div className="circle"></div>
-                <div className="circle"></div>
-                <div className="circle"></div>
-                <div className="circle"></div>
-                <div className="circle"></div>
                 <div className="circle"></div>
                 <div className="circle"></div>
                 <div className="circle"></div>

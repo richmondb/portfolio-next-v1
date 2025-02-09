@@ -12,7 +12,7 @@
   margin: 0;
   outline: none;
   overflow: visible;
-  padding: 1.15em 1.50em;
+  padding: 1em 1.50em;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -21,7 +21,7 @@
   user-select: none;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     color: white;
     background: rgba(0, 0, 0, 0.6);
   }

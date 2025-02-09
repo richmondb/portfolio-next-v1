@@ -7,11 +7,13 @@ import ExperienceSection from "@/app/_components/ui/ExperiencesSection/Experienc
 import EducationSection from "@/app/_components/ui/EducationSection/EducationSection";
 import ProjectsSection from "@/app/_components/ui/ProjectsSection/ProjectsSection";
 import AnimateInView from "@/app/_components/ui/AnimateInView";
+import HeroSection from "@/app/_components/ui/HeroSection/HeroSection";
 
 export default function Home() {
 
-
     return (<>
+        <HeroSection/>
+
         <AboutSection/>
 
         <AnimateInView sectionname={'experience'}>
