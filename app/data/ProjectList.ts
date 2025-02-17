@@ -13,15 +13,14 @@ export const ProjectList: projectType[] = [
     languages: ["Next.js", "Framer Motion", "Typescript", "Tailwind CSS"],
   },
   {
-    image: "/images/capstone_web.png",
-    image_alt: "capstone website",
-    project_origin: "College Project",
-    title: "Capstone E-commerce",
-    demo: undefined,
-    github: "https://github.com/richmondb/prtech-e-commerce-capstone",
-    description:
-      "College capstone Website utilizing machine learning and laravel framework.",
-    languages: ["Laravel (PHP)", "Python (Api, Machine Learning)"],
+    "image": "/images/capstone_web.png",
+    "image_alt": "capstone website",
+    "project_origin": "College Project",
+    "title": "Capstone E-commerce",
+    "demo": undefined,
+    "github": "https://github.com/richmondb/prtech-e-commerce-capstone",
+    "description": "Capstone utilizing machine learning and Laravel framework. The project leverages machine learning algorithms for product recommendations, customer behavior analysis, and sales forecasting, integrated seamlessly with the Laravel backend.",
+    "languages": ["Laravel (PHP)", "Python (API, ML)"]
   },
   {
     image: "/images/investofarm_web.jpeg",
@@ -68,7 +67,7 @@ export const ProjectList: projectType[] = [
     image_alt: "Fullstack Monorepo App",
     project_origin: "Portfolio Project",
     title: "Fullstack Monorepo",
-    demo: "", // No Demo URL found in context
+    demo: undefined, // No Demo URL found in context
     github: "https://github.com/richmondb/monorepo-adonisjs-nextjs.git", // No GitHub URL found in context
     description: 
       "A modern fullstack monorepo application built with Next.js for the frontend and AdonisJS for the backend API. Features type-safe development, efficient module sharing, and integrated development environment.",
